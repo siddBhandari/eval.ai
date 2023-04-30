@@ -1,0 +1,1 @@
+response.full_text_annotation
