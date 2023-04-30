@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:form_app/editAnswer.dart';
 import 'package:form_app/form.dart';
 import 'package:form_app/ocr.dart';
 
@@ -21,7 +20,6 @@ class MyApp extends StatelessWidget {
       ),
       home: MainForm(),
       routes: {
-        EditAnswer.routeName:(context)=>EditAnswer(),
       },
     );
   }

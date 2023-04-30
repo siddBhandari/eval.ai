@@ -51,44 +51,53 @@ class _MainFormState extends State<MainForm> {
           padding: EdgeInsets.all(30),
           child: Column(
             children: [
-              TextFormField(
-                decoration: InputDecoration(hintText: 'Enter Your Question'),
-                onChanged: (value) => mainQuestion = value,
+              Expanded(
+                child: TextFormField(
+                  decoration: InputDecoration(hintText: 'Enter Your Question'),
+                  onChanged: (value) => mainQuestion = value,
+                ),
+                flex: 2,
               ),
               Padding(
                 padding: EdgeInsets.only(top: 25),
               ),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.end,
-                children: [
-                  IconButton(
-                    onPressed: () {
-                      setState(() {
-                        _count++;
-                      });
-                    },
-                    icon: Icon(Icons.add),
-                  ),
-                  Spacer(),
-                  IconButton(
-                    onPressed: () {
-                      setState(() {
-                        _count = 0;
-                      });
-                    },
-                    icon: Icon(Icons.refresh),
-                  ),
-                ],
-              ),
-              Container(
-                height: 490,
-                child: ListView.builder(
-                  shrinkWrap: true,
-                  itemBuilder: (context, index) {
-                    return _row(index);
-                  },
-                  itemCount: _count,
+              Expanded(
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.end,
+                  children: [
+                    IconButton(
+                      onPressed: () {
+                        setState(() {
+                          _count++;
+                        });
+                      },
+                      icon: Icon(Icons.add),
+                    ),
+                    Spacer(),
+                    IconButton(
+                      onPressed: () {
+                        setState(() {
+                          _count = 0;
+                        });
+                      },
+                      icon: Icon(Icons.refresh),
+                    ),
+                  ],
                 ),
+                flex: 2,
+              ),
+              Expanded(
+                child: Container(
+                  height: 490,
+                  child: ListView.builder(
+                    shrinkWrap: true,
+                    itemBuilder: (context, index) {
+                      return _row(index);
+                    },
+                    itemCount: _count,
+                  ),
+                ),
+                flex: 45,
               ),
               ElevatedButton(
                 onPressed: _onSubmit,
