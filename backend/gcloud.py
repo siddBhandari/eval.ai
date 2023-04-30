@@ -46,4 +46,4 @@ def detect_document(path):
             'https://cloud.google.com/apis/design/errors'.format(
                 response.error.message))
 
-detect_document(img_path)
+# detect_document(img_path)
