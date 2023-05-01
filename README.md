@@ -2,7 +2,7 @@
 
 eval.ai is an automated AI powered application which can evaluate answer scripts automatically and provides the marks obtained assessed from evaluation scheme and provides the details assessment of the answers! eval.ai provides a unique value proposition to the education system with its cutting-edge technology, optimized for modern evaluation needs.
 
-#How it works:
+# How it works:
 1. Teachers Upload Answer Sheets and Evaluation Scheme
 2. The App Analyzes the Sheets
 3. The App Provides Detailed Feedback and the marks obtained
